@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TipCalc</string>
+    <string name="currentEmployees">Current Employees</string>
+    <string name="doTips">Do Tips</string>
+    <string name="title_activity_employee_list">EmployeeListActivity</string>
+    <string name="welcome">Happy Tuesday! Welcome to the tip calculator!</string>
+    <string name="employees">Employee List</string>
+    <string name="textNoneSaved">Employee list empty!?</string>
+    <string name="totalMoney">total store earned tips</string>
+    <string name="totalHours">total employee hours worked</string>
+    <string name="empHours" />
 </resources>
