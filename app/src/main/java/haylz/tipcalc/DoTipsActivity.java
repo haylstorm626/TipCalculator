@@ -14,6 +14,7 @@ public class DoTipsActivity extends AppCompatActivity {
     String totMoney;
     String totHours;
     double[] hours;
+    int size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,12 @@ public class DoTipsActivity extends AppCompatActivity {
         theListView.setEmptyView(empty);
 
         final List<Employee> dankList = list.load(getApplicationContext()); //= LOAD LIST
+        size = dankList.size();
+
+        for(int i=0; i<size; i++){
+            EditText eachHours = (EditText)findViewById(R.id.totalHours);
+            hours[i] = Double.parseDouble(eachHours.getText().toString());
+        }
 
         EmployeeListAdapter adapter = new EmployeeListAdapter(this, dankList);
         theListView.setAdapter(adapter);
