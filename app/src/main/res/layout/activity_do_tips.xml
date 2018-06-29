@@ -21,12 +21,89 @@
         android:layout_below="@id/totalMoney"
         android:inputType="numberDecimal"/>
 
-    <ListView
-        android:id="@+id/listEmployees"
+    <Button
+        android:id="@+id/goButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_below="@+id/hours6"/>
+
+    <EditText
+        android:id="@+id/hours0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:layout_below="@+id/totalHours"/>
+
+    <EditText
+        android:id="@+id/hours1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours0"/>
+
+    <EditText
+        android:id="@+id/hours2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours1"/>
+
+    <EditText
+        android:id="@+id/hours3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours2"/>
+
+    <EditText
+        android:id="@+id/hours4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours3"/>
+
+    <EditText
+        android:id="@+id/hours5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours4"/>
+
+    <EditText
+        android:id="@+id/hours6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours5"/>
+<!--
+    <EditText
+        android:id="@+id/hours7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours6"/>
+
+    <EditText
+        android:id="@+id/hours8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours7"/>
+
+    <EditText
+        android:id="@+id/hours9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours8"/>
+
+    <EditText
+        android:id="@+id/hours10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/hours9"/>-->
+
+
 
 </RelativeLayout>

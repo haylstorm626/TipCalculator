@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EmployeeListActivity" />
-        <activity android:name=".DoTipsActivity"></activity>
+        <activity android:name=".DoTipsActivity" />
+        <activity android:name=".TipResultActivity"></activity>
     </application>
 
 </manifest>
