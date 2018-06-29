@@ -73,7 +73,7 @@ public class EmployeeListActivity extends AppCompatActivity {
                 String num = inputNum.getText().toString();
                 String name = inputName.getText().toString();
                 int lNum = nlist.size() + 1;
-                Employee emp = new Employee (name, num, lNum);
+                Employee emp = new Employee (name, num, lNum, 0, 0);
                 nlist.add(emp);
                 recreate();
             }

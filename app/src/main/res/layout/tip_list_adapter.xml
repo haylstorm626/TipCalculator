@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/titleTextView"
+        android:maxLength="30"
+        android:textSize="17sp"/>
+
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTextView"
+        android:text="@+id/subtitleTextView"
+        android:maxLength="35"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/trackButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/titleTextView"
+        android:gravity="end">
+
+
+        <TextView
+            android:id="@+id/hoursTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/hoursTextView"
+            android:maxLength="6"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/tipsTextView"
+            android:layout_toRightOf="@id/hoursTextView"
+            android:maxLength="6"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

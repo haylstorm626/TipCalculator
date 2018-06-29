@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".EmployeeListActivity" />
         <activity android:name=".DoTipsActivity" />
-        <activity android:name=".TipResultActivity"></activity>
+        <activity android:name=".TipResultActivity" />
+        <activity android:name=".TipListAdapter"></activity>
     </application>
 
 </manifest>
