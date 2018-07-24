@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class TipResultActivity extends AppCompatActivity {
 
@@ -16,11 +19,26 @@ public class TipResultActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        double[] money = extras.getDoubleArray("extra_money");
         double rate = extras.getDouble("extra_rate");
+        String iRate = Double.toString(rate);
 
-        Log.i("TipResultActivity", "money" + Arrays.toString(money));
-        Log.i("TipResultActivity", "rate" + rate);
+        TextView rateTextView = (TextView) findViewById(R.id.rate);
+        rateTextView.setText("Tip rate: " + iRate);
+
+        EmployeeList list = EmployeeList.getInstance();
+        final List<Employee> dopeList = list.load(getApplicationContext()); //= LOAD LIST
+
+        int size = dopeList.size();
+
+        final ListView theListView = (ListView) findViewById(R.id.listEmployees);
+
+        TipListAdapter adapter = new TipListAdapter(this, dopeList);
+        theListView.setAdapter(adapter);
+
+        //for(int i=0; i<size; i++) {
+        //    Log.i("TipResultActivity", "money" + dopeList.get(i).tips);
+        //}
+        //Log.i("TipResultActivity", "rate" + rate);
 
         //display rate
         //display employee list with hours

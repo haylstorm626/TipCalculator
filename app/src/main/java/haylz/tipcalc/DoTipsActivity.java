@@ -17,8 +17,8 @@ public class DoTipsActivity extends AppCompatActivity {
     EditText[] eachHours;
     double totMoney;
     double totHours;
-    double[] hours;
-    double[] money;
+    //double[] hours;
+    //double[] money;
     double rate;
     int[] id = {R.id.hours0, R.id.hours1, R.id.hours2, R.id.hours3, R.id.hours4, R.id.hours5, R.id.hours6};
     int size;
@@ -42,8 +42,8 @@ public class DoTipsActivity extends AppCompatActivity {
         final List<Employee> dankList = list.load(getApplicationContext()); //= LOAD LIST
         size = dankList.size();
 
-        hours = new double[size];
-        money = new double[size];
+        //hours = new double[size];
+        //money = new double[size];
         eachHours = new EditText[size];
 
         for(int i=0; i<size; i++){
@@ -57,11 +57,13 @@ public class DoTipsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 totMoney = Double.parseDouble(totalMoney.getText().toString());
                 totHours = Double.parseDouble(totalHours.getText().toString());
-                for(int i=0; i<size; i++){ hours[i] = Double.parseDouble(eachHours[i].getText().toString()); }
-                calculate();
+                for(int i=0; i<size; i++){
+                    dankList.get(i).hours = Double.parseDouble(eachHours[i].getText().toString());
+                }
+                calculate(dankList);
                 Intent intent = new Intent(DoTipsActivity.this, TipResultActivity.class);
                 Bundle extras = new Bundle();
-                extras.putDoubleArray("extra_money", money);
+                //extras.putDoubleArray("extra_money", money);
                 extras.putDouble("extra_rate", rate);
                 intent.putExtras(extras);
                 startActivity(intent);}
@@ -71,10 +73,10 @@ public class DoTipsActivity extends AppCompatActivity {
         //theListView.setAdapter(adapter);
     }
 
-    public void calculate(){
+    public void calculate(List<Employee> dankList){
         rate = totMoney/totHours;
         for(int i=0; i<size; i++){
-            money[i] = rate*hours[i];
+            dankList.get(i).tips = rate*dankList.get(i).hours;
         }
     }
 }
