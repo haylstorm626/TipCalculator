@@ -19,7 +19,8 @@
         <activity android:name=".EmployeeListActivity" />
         <activity android:name=".DoTipsActivity" />
         <activity android:name=".TipResultActivity" />
-        <activity android:name=".TipListAdapter"></activity>
+        <activity android:name=".TipListAdapter" />
+        <activity android:name=".InputAdapter"></activity>
     </application>
 
 </manifest>

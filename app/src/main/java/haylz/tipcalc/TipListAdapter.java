@@ -63,7 +63,7 @@ public class TipListAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if(convertView == null) {
-            convertView = mInflater.inflate(R.layout.employee_list_adapter, parent, false);
+            convertView = mInflater.inflate(R.layout.tip_list_adapter, parent, false);
 
             holder = new ViewHolder();
             holder.titleTextView = (TextView) convertView.findViewById(R.id.titleTextView);
@@ -86,8 +86,8 @@ public class TipListAdapter extends BaseAdapter {
 
         titleTextView.setText(item.name);
         subtitleTextView.setText(item.number);
-        hoursTextView.setText(String.valueOf(item.hours));
-        tipsTextView.setText(String.valueOf(item.tips));
+        hoursTextView.setText(Double.toString(item.hours));
+        tipsTextView.setText(Double.toString(item.tips));
 
         return convertView;
     }

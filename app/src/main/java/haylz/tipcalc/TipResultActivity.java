@@ -35,12 +35,5 @@ public class TipResultActivity extends AppCompatActivity {
         TipListAdapter adapter = new TipListAdapter(this, dopeList);
         theListView.setAdapter(adapter);
 
-        //for(int i=0; i<size; i++) {
-        //    Log.i("TipResultActivity", "money" + dopeList.get(i).tips);
-        //}
-        //Log.i("TipResultActivity", "rate" + rate);
-
-        //display rate
-        //display employee list with hours
     }
 }
